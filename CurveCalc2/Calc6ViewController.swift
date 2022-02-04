@@ -55,35 +55,46 @@ class Calc6ViewController: UIViewController {
 
 
     @IBAction func goCalc6(_ sender: Any) {
+        
         guard let hZValue = Double(hZ.text!) else {return}
-        var dXArray = [Double]()
-        var dYArray = [Double]()
-        let xTilt = ((Double(hZ.text!)!)-(Double(hX.text!)!))/Double(lX.text!)!
-        let yTilt = ((Double(hY.text!)!)-(Double(hZ.text!)!))/Double(lY.text!)!
+        guard let hXValue = Double(hX.text!) else {return}
+        guard let hYValue = Double(hY.text!) else {return}
+        guard let lXValue = Double(lX.text!) else {return}
+        guard let lYValue = Double(lY.text!) else {return}
+        
+        guard let k2DXValue = Double(k2DX.text!) else {return}
+        guard let k2DYValue = Double(k2DY.text!) else {return}
+        
+        guard let k3DXValue = Double(k3DX.text!) else {return}
+        guard let k3DYValue = Double(k3DY.text!) else {return}
+        
+        guard let k4DXValue = Double(k4DX.text!) else {return}
+        guard let k4DYValue = Double(k4DY.text!) else {return}
+        
+        guard let k5DXValue = Double(k5DX.text!) else {return}
+        guard let k5DYValue = Double(k5DY.text!) else {return}
+        
+        guard let k6DXValue = Double(k6DX.text!) else {return}
+        guard let k6DYValue = Double(k6DY.text!) else {return}
         
         
-        dXArray.append(Double(k2DX.text!)!)
-        dXArray.append(Double(k3DX.text!)!)
-        dXArray.append(Double(k4DX.text!)!)
-        dXArray.append(Double(k5DX.text!)!)
-        dXArray.append(Double(k6DX.text!)!)
+        let dXArray = [k2DXValue, k3DXValue, k4DXValue, k5DXValue, k6DXValue]
+        let dYArray = [k2DYValue, k3DYValue, k4DYValue, k5DYValue, k6DYValue]
         
-        dYArray.append(Double(k2DY.text!)!)
-        dYArray.append(Double(k3DY.text!)!)
-        dYArray.append(Double(k4DY.text!)!)
-        dYArray.append(Double(k5DY.text!)!)
-        dYArray.append(Double(k6DY.text!)!)
+        let xTilt = (hZValue-hXValue)/lXValue
+        let yTilt = (hYValue-hZValue)/lYValue
         
         let summDX = dXArray.reduce(0, +)
         let summDY = dYArray.reduce(0, +)
         
-        dXArray.map({$0/summDX*Double(lX.text!)!})
-        dYArray.map({$0/summDY*Double(lY.text!)!})
+        let dXArrayEquval = dXArray.map({$0/summDX*lXValue})
+        let dYArrayEquval = dYArray.map({$0/summDY*lYValue})
+        
         hK1.text = hX.text
-        hK2.text = String(dXArray[0]*xTilt+dYArray[0]*yTilt+(Double(hK1.text!)!))
-        hK3.text = String(dXArray[1]*xTilt+dYArray[1]*yTilt+(Double(hK2.text!)!))
-        hK4.text = String(dXArray[2]*xTilt+dYArray[2]*yTilt+(Double(hK3.text!)!))
-        hK5.text = String(dXArray[3]*xTilt+dYArray[3]*yTilt+(Double(hK4.text!)!))
+        hK2.text = String(dXArrayEquval[0]*xTilt+dYArrayEquval[0]*yTilt+(Double(hK1.text!)!))
+        hK3.text = String(dXArrayEquval[1]*xTilt+dYArrayEquval[1]*yTilt+(Double(hK2.text!)!))
+        hK4.text = String(dXArrayEquval[2]*xTilt+dYArrayEquval[2]*yTilt+(Double(hK3.text!)!))
+        hK5.text = String(dXArrayEquval[3]*xTilt+dYArrayEquval[3]*yTilt+(Double(hK4.text!)!))
         hK6.text = hY.text
 
         
