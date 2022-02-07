@@ -23,14 +23,6 @@ class Calc10ViewController: UIViewController {
     @IBOutlet weak var k5DX: UITextField!
     @IBOutlet weak var k6DX: UITextField!
     @IBOutlet weak var k6DY: UITextField!
-    @IBOutlet weak var hK1: UILabel!
-    @IBOutlet weak var hK2: UILabel!
-    @IBOutlet weak var hK3: UILabel!
-    @IBOutlet weak var hK4: UILabel!
-    @IBOutlet weak var hK5: UILabel!
-    @IBOutlet weak var mainStackView: UIStackView!
-    @IBOutlet weak var hK6: UILabel!
-    @IBOutlet weak var myScrollView: UIScrollView!
     @IBOutlet weak var k7DX: UITextField!
     @IBOutlet weak var k7DY: UITextField!
     @IBOutlet weak var k8DX: UITextField!
@@ -39,12 +31,25 @@ class Calc10ViewController: UIViewController {
     @IBOutlet weak var k9DY: UITextField!
     @IBOutlet weak var k10DX: UITextField!
     @IBOutlet weak var k10DY: UITextField!
-    
+    @IBOutlet weak var hK1: UILabel!
+    @IBOutlet weak var hK2: UILabel!
+    @IBOutlet weak var hK3: UILabel!
+    @IBOutlet weak var hK4: UILabel!
+    @IBOutlet weak var hK5: UILabel!
+    @IBOutlet weak var hK6: UILabel!
+    @IBOutlet weak var hK7: UILabel!
+    @IBOutlet weak var hK8: UILabel!
+    @IBOutlet weak var hK9: UILabel!
+    @IBOutlet weak var hK10: UILabel!
+    @IBOutlet weak var myScrollView: UIScrollView!
+    @IBOutlet weak var mainStackView: UIStackView!
+    @IBOutlet weak var outputStackView: UIStackView!
     override func viewDidLoad() {
         super.viewDidLoad()
         myScrollView.addSubview(mainStackView)
         myScrollView.contentSize = CGSize(width: mainStackView.frame.width, height: mainStackView.frame.height+20)
         print("didload")
+        outputStackView.isHidden = true
         
         
 
@@ -72,9 +77,15 @@ class Calc10ViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    
 
-
-    @IBAction func goCalc6(_ sender: Any) {
+    @IBAction func goBack(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func goCalc10(_ sender: Any) {
         
         //show to user where misstake
         
@@ -222,6 +233,8 @@ class Calc10ViewController: UIViewController {
         let dXArrayEquval = dXArray.map({$0/summDX*lXValue})
         let dYArrayEquval = dYArray.map({$0/summDY*lYValue})
         
+        
+        
         let hK2Value = dXArrayEquval[0]*xTilt+dYArrayEquval[0]*yTilt+hXValue
         let hK3Value = dXArrayEquval[1]*xTilt+dYArrayEquval[1]*yTilt+hK2Value
         let hK4Value = dXArrayEquval[2]*xTilt+dYArrayEquval[2]*yTilt+hK3Value
@@ -235,16 +248,17 @@ class Calc10ViewController: UIViewController {
         //show result to user
         
         
-        hK1.text = hX.text
-        hK2.text = String(Double(round(1000*hK2Value)/1000))
-        hK3.text = String(Double(round(1000*hK3Value)/1000))
-        hK4.text = String(Double(round(1000*hK4Value)/1000))
-        hK5.text = String(Double(round(1000*hK5Value)/1000))
-        hK6.text = String(Double(round(1000*hK6Value)/1000))
-        hK7.text = String(Double(round(1000*hK7Value)/1000))
-        hK8.text = String(Double(round(1000*hK8Value)/1000))
-        hK9.text = String(Double(round(1000*hK9Value)/1000))
-        hK10.text = hY.text
+        hK1.text = "H K1 = " + String(Double(round(1000*hXValue)/1000))
+        hK2.text = "H K2 = " + String(Double(round(1000*hK2Value)/1000))
+        hK3.text = "H K3 = " + String(Double(round(1000*hK3Value)/1000))
+        hK4.text = "H K4 = " + String(Double(round(1000*hK4Value)/1000))
+        hK5.text = "H K5 = " + String(Double(round(1000*hK5Value)/1000))
+        hK6.text = "H K6 = " + String(Double(round(1000*hK6Value)/1000))
+        hK7.text = "H K7 = " + String(Double(round(1000*hK7Value)/1000))
+        hK8.text = "H K8 = " + String(Double(round(1000*hK8Value)/1000))
+        hK9.text = "H K9 = " + String(Double(round(1000*hK9Value)/1000))
+        hK10.text = "H K10 = " + String(Double(round(1000*hYValue)/1000))
+        outputStackView.isHidden = false
 
         
         

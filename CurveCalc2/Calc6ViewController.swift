@@ -57,7 +57,10 @@ class Calc6ViewController: UIViewController {
     }
     */
 
-
+    @IBAction func goBack(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func goCalc6(_ sender: Any) {
         
         //show to user where misstake
