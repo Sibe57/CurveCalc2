@@ -620,8 +620,8 @@
                             <scrollView clipsSubviews="YES" contentMode="scaleAspectFit" ambiguous="YES" bounces="NO" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="scrollableAxes" indicatorStyle="white" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QI8-nT-sqs" propertyAccessControl="none">
                                 <rect key="frame" x="0.0" y="486" width="390" height="214"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="t1K-rx-8SQ">
-                                        <rect key="frame" x="20" y="10" width="350" height="304"/>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t1K-rx-8SQ">
+                                        <rect key="frame" x="20" y="10" width="350" height="254"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NtP-1P-elo">
                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="34"/>
@@ -665,7 +665,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PcI-xb-loi">
-                                                <rect key="frame" x="0.0" y="54" width="350" height="34"/>
+                                                <rect key="frame" x="0.0" y="44" width="350" height="34"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="L(X)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bCO-eu-gAQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="34"/>
@@ -718,7 +718,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Mhr-k2-N3w">
-                                                <rect key="frame" x="0.0" y="108" width="350" height="34"/>
+                                                <rect key="frame" x="0.0" y="88" width="350" height="34"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="K3 dX" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m7k-aL-Zi3">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="34"/>
@@ -771,7 +771,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wKy-Du-uZh">
-                                                <rect key="frame" x="0.0" y="162" width="350" height="34"/>
+                                                <rect key="frame" x="0.0" y="132" width="350" height="34"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="K5 dX" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YXk-3p-Lce">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="34"/>
@@ -824,9 +824,9 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BXh-ML-b1F">
-                                                <rect key="frame" x="0.0" y="216" width="350" height="34"/>
+                                                <rect key="frame" x="0.0" y="176" width="350" height="34"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="K5 dX" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wch-Kz-7PI">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="K7 dX" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wch-Kz-7PI">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="34"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -838,7 +838,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="K5 dY" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nHd-GI-uaY">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="K7 dY" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nHd-GI-uaY">
                                                         <rect key="frame" x="90" y="0.0" width="80" height="34"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -850,7 +850,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="K6 dX" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0fO-8n-5Of">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="K8 dX" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0fO-8n-5Of">
                                                         <rect key="frame" x="180" y="0.0" width="80" height="34"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -862,7 +862,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="K6 dY" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B8X-pg-0mH">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="K8 dY" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B8X-pg-0mH">
                                                         <rect key="frame" x="270" y="0.0" width="80" height="34"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -877,9 +877,9 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cbm-xz-mzG">
-                                                <rect key="frame" x="0.0" y="270" width="350" height="34"/>
+                                                <rect key="frame" x="0.0" y="220" width="350" height="34"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="K5 dX" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ktu-h6-jUV">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="K9 dX" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ktu-h6-jUV">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="34"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -891,7 +891,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="K5 dY" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LR7-jK-oD1">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="K9 dY" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LR7-jK-oD1">
                                                         <rect key="frame" x="90" y="0.0" width="80" height="34"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -903,7 +903,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="K6 dX" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yux-1q-fQZ">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="K10 dX" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yux-1q-fQZ">
                                                         <rect key="frame" x="180" y="0.0" width="80" height="34"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -915,7 +915,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="K6 dY" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="heh-hs-IuY">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="K10 dY" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="heh-hs-IuY">
                                                         <rect key="frame" x="270" y="0.0" width="80" height="34"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -990,6 +990,8 @@
                         <outlet property="hX" destination="aVx-7I-5Vz" id="z9I-wW-thu"/>
                         <outlet property="hY" destination="cPO-KY-EA4" id="LbM-r5-8nC"/>
                         <outlet property="hZ" destination="x3n-ry-Usn" id="Kio-ST-cas"/>
+                        <outlet property="k10DX" destination="yux-1q-fQZ" id="oCZ-Xa-EDW"/>
+                        <outlet property="k10DY" destination="heh-hs-IuY" id="tnX-g3-fNE"/>
                         <outlet property="k2DX" destination="rCd-eD-8WZ" id="ldo-WP-dxj"/>
                         <outlet property="k2DY" destination="hiV-XT-pgO" id="Ja9-U2-af9"/>
                         <outlet property="k3DX" destination="m7k-aL-Zi3" id="Tta-9B-XAs"/>
@@ -1000,6 +1002,12 @@
                         <outlet property="k5DY" destination="kII-Ej-RAb" id="tL5-t9-Cpg"/>
                         <outlet property="k6DX" destination="KHY-Mn-aWM" id="hLI-tB-RbC"/>
                         <outlet property="k6DY" destination="Twa-Sr-Plp" id="NVm-r5-OCo"/>
+                        <outlet property="k7DX" destination="Wch-Kz-7PI" id="SYC-DE-Yhn"/>
+                        <outlet property="k7DY" destination="nHd-GI-uaY" id="Wq0-cc-iH3"/>
+                        <outlet property="k8DX" destination="0fO-8n-5Of" id="0hh-Op-DRs"/>
+                        <outlet property="k8DY" destination="B8X-pg-0mH" id="VWw-Aq-N8V"/>
+                        <outlet property="k9DX" destination="Ktu-h6-jUV" id="f4U-6U-mfM"/>
+                        <outlet property="k9DY" destination="LR7-jK-oD1" id="gqJ-8P-vew"/>
                         <outlet property="lX" destination="bCO-eu-gAQ" id="Wgi-1E-KUs"/>
                         <outlet property="lY" destination="b9M-wu-n8D" id="cdF-yn-AOu"/>
                         <outlet property="mainStackView" destination="t1K-rx-8SQ" id="JxT-Zj-oDU"/>

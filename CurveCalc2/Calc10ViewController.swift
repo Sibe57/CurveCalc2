@@ -31,6 +31,14 @@ class Calc10ViewController: UIViewController {
     @IBOutlet weak var mainStackView: UIStackView!
     @IBOutlet weak var hK6: UILabel!
     @IBOutlet weak var myScrollView: UIScrollView!
+    @IBOutlet weak var k7DX: UITextField!
+    @IBOutlet weak var k7DY: UITextField!
+    @IBOutlet weak var k8DX: UITextField!
+    @IBOutlet weak var k8DY: UITextField!
+    @IBOutlet weak var k9DX: UITextField!
+    @IBOutlet weak var k9DY: UITextField!
+    @IBOutlet weak var k10DX: UITextField!
+    @IBOutlet weak var k10DY: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -130,6 +138,38 @@ class Calc10ViewController: UIViewController {
             k6DY.textColor = .red
         } else {k6DY.textColor = .black}
         
+        if Double(k7DX.text!.replacingOccurrences(of: ",", with: ".")) == nil {
+            k7DX.textColor = .red
+        } else {k7DX.textColor = .black}
+        
+        if Double(k7DY.text!.replacingOccurrences(of: ",", with: ".")) == nil {
+            k7DY.textColor = .red
+        } else {k7DY.textColor = .black}
+        
+        if Double(k8DX.text!.replacingOccurrences(of: ",", with: ".")) == nil {
+            k8DX.textColor = .red
+        } else {k8DX.textColor = .black}
+        
+        if Double(k8DY.text!.replacingOccurrences(of: ",", with: ".")) == nil {
+            k8DY.textColor = .red
+        } else {k8DY.textColor = .black}
+        
+        if Double(k9DX.text!.replacingOccurrences(of: ",", with: ".")) == nil {
+            k9DX.textColor = .red
+        } else {k9DX.textColor = .black}
+        
+        if Double(k9DY.text!.replacingOccurrences(of: ",", with: ".")) == nil {
+            k9DY.textColor = .red
+        } else {k9DY.textColor = .black}
+        
+        if Double(k10DX.text!.replacingOccurrences(of: ",", with: ".")) == nil {
+            k10DX.textColor = .red
+        } else {k10DX.textColor = .black}
+        
+        if Double(k10DY.text!.replacingOccurrences(of: ",", with: ".")) == nil {
+            k10DY.textColor = .red
+        } else {k10DY.textColor = .black}
+        
         
         
         //safety unwrapped all textField
@@ -155,10 +195,23 @@ class Calc10ViewController: UIViewController {
         guard let k6DXValue = Double(k6DX.text!.replacingOccurrences(of: ",", with: ".")) else {return}
         guard let k6DYValue = Double(k6DY.text!.replacingOccurrences(of: ",", with: ".")) else {return}
         
+        guard let k7DXValue = Double(k7DX.text!.replacingOccurrences(of: ",", with: ".")) else {return}
+        guard let k7DYValue = Double(k7DY.text!.replacingOccurrences(of: ",", with: ".")) else {return}
+        
+        guard let k8DXValue = Double(k8DX.text!.replacingOccurrences(of: ",", with: ".")) else {return}
+        guard let k8DYValue = Double(k8DY.text!.replacingOccurrences(of: ",", with: ".")) else {return}
+        
+        guard let k9DXValue = Double(k9DX.text!.replacingOccurrences(of: ",", with: ".")) else {return}
+        guard let k9DYValue = Double(k9DY.text!.replacingOccurrences(of: ",", with: ".")) else {return}
+        
+        guard let k10DXValue = Double(k10DX.text!.replacingOccurrences(of: ",", with: ".")) else {return}
+        guard let k10DYValue = Double(k10DY.text!.replacingOccurrences(of: ",", with: ".")) else {return}
+        
         // simple ingeeneric magic ;)
         
-        let dXArray = [k2DXValue, k3DXValue, k4DXValue, k5DXValue, k6DXValue]
-        let dYArray = [k2DYValue, k3DYValue, k4DYValue, k5DYValue, k6DYValue]
+        let dXArray = [k2DXValue, k3DXValue, k4DXValue, k5DXValue, k6DXValue, k7DXValue, k8DXValue, k9DXValue, k10DXValue]
+        
+        let dYArray = [k2DYValue, k3DYValue, k4DYValue, k5DYValue, k6DYValue, k7DYValue, k8DYValue, k9DYValue, k10DYValue]
         
         let xTilt = (hZValue-hXValue)/lXValue
         let yTilt = (hYValue-hZValue)/lYValue
@@ -173,6 +226,10 @@ class Calc10ViewController: UIViewController {
         let hK3Value = dXArrayEquval[1]*xTilt+dYArrayEquval[1]*yTilt+hK2Value
         let hK4Value = dXArrayEquval[2]*xTilt+dYArrayEquval[2]*yTilt+hK3Value
         let hK5Value = dXArrayEquval[3]*xTilt+dYArrayEquval[3]*yTilt+hK4Value
+        let hK6Value = dXArrayEquval[4]*xTilt+dYArrayEquval[4]*yTilt+hK5Value
+        let hK7Value = dXArrayEquval[5]*xTilt+dYArrayEquval[5]*yTilt+hK6Value
+        let hK8Value = dXArrayEquval[6]*xTilt+dYArrayEquval[6]*yTilt+hK7Value
+        let hK9Value = dXArrayEquval[7]*xTilt+dYArrayEquval[7]*yTilt+hK8Value
         
         
         //show result to user
@@ -183,7 +240,11 @@ class Calc10ViewController: UIViewController {
         hK3.text = String(Double(round(1000*hK3Value)/1000))
         hK4.text = String(Double(round(1000*hK4Value)/1000))
         hK5.text = String(Double(round(1000*hK5Value)/1000))
-        hK6.text = hY.text
+        hK6.text = String(Double(round(1000*hK6Value)/1000))
+        hK7.text = String(Double(round(1000*hK7Value)/1000))
+        hK8.text = String(Double(round(1000*hK8Value)/1000))
+        hK9.text = String(Double(round(1000*hK9Value)/1000))
+        hK10.text = hY.text
 
         
         
