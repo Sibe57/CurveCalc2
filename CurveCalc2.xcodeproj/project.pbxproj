@@ -105,15 +105,15 @@
 		02D6806F27A1B218004CC6E7 /* CurveCalc2 */ = {
 			isa = PBXGroup;
 			children = (
-				02BAEBE227AEFBC100D7488F /* Calc10ViewController.swift */,
 				02D680A027A1CA52004CC6E7 /* PickViewController.swift */,
 				02D6807027A1B218004CC6E7 /* AppDelegate.swift */,
 				02D6807227A1B218004CC6E7 /* SceneDelegate.swift */,
 				02D6807427A1B218004CC6E7 /* ViewController.swift */,
 				02D6807627A1B218004CC6E7 /* Main.storyboard */,
-				022192E627A30E620042A6C7 /* Calc6ViewController.swift */,
 				02D6807927A1B218004CC6E7 /* Assets.xcassets */,
 				02D6807B27A1B218004CC6E7 /* LaunchScreen.storyboard */,
+				02BAEBE227AEFBC100D7488F /* Calc10ViewController.swift */,
+				022192E627A30E620042A6C7 /* Calc6ViewController.swift */,
 				02D6807E27A1B218004CC6E7 /* Info.plist */,
 			);
 			path = CurveCalc2;

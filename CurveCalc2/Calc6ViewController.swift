@@ -8,6 +8,7 @@
 import UIKit
 
 class Calc6ViewController: UIViewController {
+    
     @IBOutlet weak var hZ: UITextField!
     @IBOutlet weak var lX: UITextField!
     @IBOutlet weak var lY: UITextField!
@@ -29,6 +30,7 @@ class Calc6ViewController: UIViewController {
     @IBOutlet weak var hK4: UILabel!
     @IBOutlet weak var hK5: UILabel!
     @IBOutlet weak var hK6: UILabel!
+    @IBOutlet weak var goCalc6Button: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
