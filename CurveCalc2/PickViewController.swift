@@ -82,8 +82,9 @@ extension PickViewController: UIPickerViewDataSource {
 }
 
 extension PickViewController: UIPickerViewDelegate {
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return String(row + 4)
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        return NSAttributedString(string: String(row + 4), attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         label.text = "Количество колов включая краевые: \(row + 4)"
