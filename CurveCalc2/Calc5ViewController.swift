@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Calc6ViewController: UIViewController {
+class Calc5ViewController: UIViewController {
     
     @IBOutlet weak var hZ: UITextField!
     @IBOutlet weak var lX: UITextField!
@@ -22,14 +22,11 @@ class Calc6ViewController: UIViewController {
     @IBOutlet weak var k4DY: UITextField!
     @IBOutlet weak var k5DY: UITextField!
     @IBOutlet weak var k5DX: UITextField!
-    @IBOutlet weak var k6DX: UITextField!
-    @IBOutlet weak var k6DY: UITextField!
     @IBOutlet weak var hK1: UILabel!
     @IBOutlet weak var hK2: UILabel!
     @IBOutlet weak var hK3: UILabel!
     @IBOutlet weak var hK4: UILabel!
     @IBOutlet weak var hK5: UILabel!
-    @IBOutlet weak var hK6: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +59,7 @@ class Calc6ViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func goCalc6(_ sender: Any) {
+    @IBAction func goCalc5(_ sender: Any) {
         
         //show to user where misstake
         
@@ -118,14 +115,7 @@ class Calc6ViewController: UIViewController {
             k5DY.textColor = .red
         } else {k5DY.textColor = .black}
         
-        if Double(k6DX.text!.replacingOccurrences(of: ",", with: ".")) == nil {
-            k6DX.textColor = .red
-        } else {k6DX.textColor = .black}
-        
-        if Double(k6DY.text!.replacingOccurrences(of: ",", with: ".")) == nil {
-            k6DY.textColor = .red
-        } else {k6DY.textColor = .black}
-        
+    
         
         
         //safety unwrapped all textField
@@ -148,13 +138,11 @@ class Calc6ViewController: UIViewController {
         guard let k5DXValue = Double(k5DX.text!.replacingOccurrences(of: ",", with: ".")) else {return}
         guard let k5DYValue = Double(k5DY.text!.replacingOccurrences(of: ",", with: ".")) else {return}
         
-        guard let k6DXValue = Double(k6DX.text!.replacingOccurrences(of: ",", with: ".")) else {return}
-        guard let k6DYValue = Double(k6DY.text!.replacingOccurrences(of: ",", with: ".")) else {return}
         
         // simple ingeeneric magic ;)
         
-        let dXArray = [k2DXValue, k3DXValue, k4DXValue, k5DXValue, k6DXValue]
-        let dYArray = [k2DYValue, k3DYValue, k4DYValue, k5DYValue, k6DYValue]
+        let dXArray = [k2DXValue, k3DXValue, k4DXValue, k5DXValue]
+        let dYArray = [k2DYValue, k3DYValue, k4DYValue, k5DYValue]
         
         let xTilt = (hZValue-hXValue)/lXValue
         let yTilt = (hYValue-hZValue)/lYValue
@@ -168,7 +156,6 @@ class Calc6ViewController: UIViewController {
         let hK2Value = dXArrayEquval[0]*xTilt+dYArrayEquval[0]*yTilt+hXValue
         let hK3Value = dXArrayEquval[1]*xTilt+dYArrayEquval[1]*yTilt+hK2Value
         let hK4Value = dXArrayEquval[2]*xTilt+dYArrayEquval[2]*yTilt+hK3Value
-        let hK5Value = dXArrayEquval[3]*xTilt+dYArrayEquval[3]*yTilt+hK4Value
         
         
         //show result to user
@@ -178,8 +165,7 @@ class Calc6ViewController: UIViewController {
         hK2.text = String(Double(round(1000*hK2Value)/1000))
         hK3.text = String(Double(round(1000*hK3Value)/1000))
         hK4.text = String(Double(round(1000*hK4Value)/1000))
-        hK5.text = String(Double(round(1000*hK5Value)/1000))
-        hK6.text = hY.text
+        hK5.text = String(Double(round(1000*hYValue)/1000))
 
         
         

@@ -44,6 +44,7 @@ class Calc10ViewController: UIViewController {
     @IBOutlet weak var myScrollView: UIScrollView!
     @IBOutlet weak var mainStackView: UIStackView!
     @IBOutlet weak var outputStackView: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         myScrollView.addSubview(mainStackView)
@@ -248,16 +249,16 @@ class Calc10ViewController: UIViewController {
         //show result to user
         
         
-        hK1.text = "H K1 = " + String(Double(round(1000*hXValue)/1000))
-        hK2.text = "H K2 = " + String(Double(round(1000*hK2Value)/1000))
-        hK3.text = "H K3 = " + String(Double(round(1000*hK3Value)/1000))
-        hK4.text = "H K4 = " + String(Double(round(1000*hK4Value)/1000))
-        hK5.text = "H K5 = " + String(Double(round(1000*hK5Value)/1000))
-        hK6.text = "H K6 = " + String(Double(round(1000*hK6Value)/1000))
-        hK7.text = "H K7 = " + String(Double(round(1000*hK7Value)/1000))
-        hK8.text = "H K8 = " + String(Double(round(1000*hK8Value)/1000))
-        hK9.text = "H K9 = " + String(Double(round(1000*hK9Value)/1000))
-        hK10.text = "H K10 = " + String(Double(round(1000*hYValue)/1000))
+        hK1.text = "h K1 = " + String(Double(round(1000*hXValue)/1000))
+        hK2.text = "h K2 = " + String(Double(round(1000*hK2Value)/1000))
+        hK3.text = "h K3 = " + String(Double(round(1000*hK3Value)/1000))
+        hK4.text = "h K4 = " + String(Double(round(1000*hK4Value)/1000))
+        hK5.text = "h K5 = " + String(Double(round(1000*hK5Value)/1000))
+        hK6.text = "h K6 = " + String(Double(round(1000*hK6Value)/1000))
+        hK7.text = "h K7 = " + String(Double(round(1000*hK7Value)/1000))
+        hK8.text = "h K8 = " + String(Double(round(1000*hK8Value)/1000))
+        hK9.text = "h K9 = " + String(Double(round(1000*hK9Value)/1000))
+        hK10.text = "h K10 = " + String(Double(round(1000*hYValue)/1000))
         outputStackView.isHidden = false
 
         

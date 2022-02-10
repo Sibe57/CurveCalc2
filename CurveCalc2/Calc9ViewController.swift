@@ -1,14 +1,13 @@
 //
-//  Calc6ViewController.swift
+//  Calc9ViewController.swift
 //  CurveCalc2
 //
-//  Created by Федор Еронин on 27.01.2022.
+//  Created by Федор Еронин on 10.02.2022.
 //
 
 import UIKit
 
-class Calc6ViewController: UIViewController {
-    
+class Calc9ViewController: UIViewController {
     @IBOutlet weak var hZ: UITextField!
     @IBOutlet weak var lX: UITextField!
     @IBOutlet weak var lY: UITextField!
@@ -24,15 +23,30 @@ class Calc6ViewController: UIViewController {
     @IBOutlet weak var k5DX: UITextField!
     @IBOutlet weak var k6DX: UITextField!
     @IBOutlet weak var k6DY: UITextField!
+    @IBOutlet weak var k7DX: UITextField!
+    @IBOutlet weak var k7DY: UITextField!
+    @IBOutlet weak var k8DX: UITextField!
+    @IBOutlet weak var k8DY: UITextField!
+    @IBOutlet weak var k9DX: UITextField!
+    @IBOutlet weak var k9DY: UITextField!
     @IBOutlet weak var hK1: UILabel!
     @IBOutlet weak var hK2: UILabel!
     @IBOutlet weak var hK3: UILabel!
     @IBOutlet weak var hK4: UILabel!
     @IBOutlet weak var hK5: UILabel!
     @IBOutlet weak var hK6: UILabel!
+    @IBOutlet weak var hK7: UILabel!
+    @IBOutlet weak var hK8: UILabel!
+    @IBOutlet weak var hK9: UILabel!
+    @IBOutlet weak var myScrollView9: UIScrollView!
+    @IBOutlet weak var mainStackView9: UIStackView!
+    @IBOutlet weak var outputStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        myScrollView9.contentSize = CGSize(width: mainStackView9.frame.width, height: mainStackView9.frame.height+20)
+        
+        outputStackView.isHidden = true
         
         
 
@@ -42,6 +56,9 @@ class Calc6ViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
         self.view.endEditing(true)
+     
+        
+        
         
         
         
@@ -57,12 +74,15 @@ class Calc6ViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    
 
     @IBAction func goBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func goCalc6(_ sender: Any) {
+    @IBAction func goCalc9(_ sender: Any) {
         
         //show to user where misstake
         
@@ -126,6 +146,31 @@ class Calc6ViewController: UIViewController {
             k6DY.textColor = .red
         } else {k6DY.textColor = .black}
         
+        if Double(k7DX.text!.replacingOccurrences(of: ",", with: ".")) == nil {
+            k7DX.textColor = .red
+        } else {k7DX.textColor = .black}
+        
+        if Double(k7DY.text!.replacingOccurrences(of: ",", with: ".")) == nil {
+            k7DY.textColor = .red
+        } else {k7DY.textColor = .black}
+        
+        if Double(k8DX.text!.replacingOccurrences(of: ",", with: ".")) == nil {
+            k8DX.textColor = .red
+        } else {k8DX.textColor = .black}
+        
+        if Double(k8DY.text!.replacingOccurrences(of: ",", with: ".")) == nil {
+            k8DY.textColor = .red
+        } else {k8DY.textColor = .black}
+        
+        if Double(k9DX.text!.replacingOccurrences(of: ",", with: ".")) == nil {
+            k9DX.textColor = .red
+        } else {k9DX.textColor = .black}
+        
+        if Double(k9DY.text!.replacingOccurrences(of: ",", with: ".")) == nil {
+            k9DY.textColor = .red
+        } else {k9DY.textColor = .black}
+        
+        
         
         
         //safety unwrapped all textField
@@ -151,10 +196,21 @@ class Calc6ViewController: UIViewController {
         guard let k6DXValue = Double(k6DX.text!.replacingOccurrences(of: ",", with: ".")) else {return}
         guard let k6DYValue = Double(k6DY.text!.replacingOccurrences(of: ",", with: ".")) else {return}
         
+        guard let k7DXValue = Double(k7DX.text!.replacingOccurrences(of: ",", with: ".")) else {return}
+        guard let k7DYValue = Double(k7DY.text!.replacingOccurrences(of: ",", with: ".")) else {return}
+        
+        guard let k8DXValue = Double(k8DX.text!.replacingOccurrences(of: ",", with: ".")) else {return}
+        guard let k8DYValue = Double(k8DY.text!.replacingOccurrences(of: ",", with: ".")) else {return}
+        
+        guard let k9DXValue = Double(k9DX.text!.replacingOccurrences(of: ",", with: ".")) else {return}
+        guard let k9DYValue = Double(k9DY.text!.replacingOccurrences(of: ",", with: ".")) else {return}
+        
+        
         // simple ingeeneric magic ;)
         
-        let dXArray = [k2DXValue, k3DXValue, k4DXValue, k5DXValue, k6DXValue]
-        let dYArray = [k2DYValue, k3DYValue, k4DYValue, k5DYValue, k6DYValue]
+        let dXArray = [k2DXValue, k3DXValue, k4DXValue, k5DXValue, k6DXValue, k7DXValue, k8DXValue, k9DXValue]
+        
+        let dYArray = [k2DYValue, k3DYValue, k4DYValue, k5DYValue, k6DYValue, k7DYValue, k8DYValue, k9DYValue]
         
         let xTilt = (hZValue-hXValue)/lXValue
         let yTilt = (hYValue-hZValue)/lYValue
@@ -165,21 +221,31 @@ class Calc6ViewController: UIViewController {
         let dXArrayEquval = dXArray.map({$0/summDX*lXValue})
         let dYArrayEquval = dYArray.map({$0/summDY*lYValue})
         
+        
+        
         let hK2Value = dXArrayEquval[0]*xTilt+dYArrayEquval[0]*yTilt+hXValue
         let hK3Value = dXArrayEquval[1]*xTilt+dYArrayEquval[1]*yTilt+hK2Value
         let hK4Value = dXArrayEquval[2]*xTilt+dYArrayEquval[2]*yTilt+hK3Value
         let hK5Value = dXArrayEquval[3]*xTilt+dYArrayEquval[3]*yTilt+hK4Value
+        let hK6Value = dXArrayEquval[4]*xTilt+dYArrayEquval[4]*yTilt+hK5Value
+        let hK7Value = dXArrayEquval[5]*xTilt+dYArrayEquval[5]*yTilt+hK6Value
+        let hK8Value = dXArrayEquval[6]*xTilt+dYArrayEquval[6]*yTilt+hK7Value
         
         
         //show result to user
         
         
-        hK1.text = hX.text
-        hK2.text = String(Double(round(1000*hK2Value)/1000))
-        hK3.text = String(Double(round(1000*hK3Value)/1000))
-        hK4.text = String(Double(round(1000*hK4Value)/1000))
-        hK5.text = String(Double(round(1000*hK5Value)/1000))
-        hK6.text = hY.text
+        hK1.text = "h K1 = " + String(Double(round(1000*hXValue)/1000))
+        hK2.text = "h K2 = " + String(Double(round(1000*hK2Value)/1000))
+        hK3.text = "h K3 = " + String(Double(round(1000*hK3Value)/1000))
+        hK4.text = "h K4 = " + String(Double(round(1000*hK4Value)/1000))
+        hK5.text = "h K5 = " + String(Double(round(1000*hK5Value)/1000))
+        hK6.text = "h K6 = " + String(Double(round(1000*hK6Value)/1000))
+        hK7.text = "h K7 = " + String(Double(round(1000*hK7Value)/1000))
+        hK8.text = "h K8 = " + String(Double(round(1000*hK8Value)/1000))
+        hK9.text = "h K9 = " + String(Double(round(1000*hYValue)/1000))
+        
+        outputStackView.isHidden = false
 
         
         

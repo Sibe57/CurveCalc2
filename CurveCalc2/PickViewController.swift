@@ -28,15 +28,43 @@ class PickViewController: UIViewController {
     }
     @IBAction func goToCalc(_ sender: Any) {
         switch picker.selectedRow(inComponent: 0) {
-        case 0,1,2,3:
+            
+        case 0: //for 4 stake
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newVC = storyBoard.instantiateViewController(withIdentifier: "Calc4ViewController") as! Calc4ViewController
+            self.present(newVC, animated: true, completion: nil)
+            
+        case 1: //for 5 stake
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newVC = storyBoard.instantiateViewController(withIdentifier: "Calc5ViewController") as! Calc5ViewController
+            self.present(newVC, animated: true, completion: nil)
+            
+        case 2: //for 6 stake
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newVC = storyBoard.instantiateViewController(withIdentifier: "Calc6ViewController") as! Calc6ViewController
             self.present(newVC, animated: true, completion: nil)
-        case 4,5,6:
+            
+        case 3: //for 7 stake
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newVC = storyBoard.instantiateViewController(withIdentifier: "Calc7ViewController") as!
+                Calc7ViewController
+            self.present(newVC, animated: true, completion: nil)
+            
+        case 4: //for 8 stake
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newVC = storyBoard.instantiateViewController(withIdentifier: "Calc8ViewController") as! Calc8ViewController
+            self.present(newVC, animated: true, completion: nil)
+            
+        case 5: //for 9 stake
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newVC = storyBoard.instantiateViewController(withIdentifier: "Calc9ViewController") as! Calc9ViewController
+            self.present(newVC, animated: true, completion: nil)
+            
+        case 6: //for 10 stake
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newVC = storyBoard.instantiateViewController(withIdentifier: "Calc10ViewController") as! Calc10ViewController
             self.present(newVC, animated: true, completion: nil)
-        default: print("COCK")
+        default: print("")
         }
     }
     

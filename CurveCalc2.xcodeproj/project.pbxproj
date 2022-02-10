@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02147A1B27B5759E00268689 /* Calc9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02147A1A27B5759E00268689 /* Calc9ViewController.swift */; };
+		02147A1D27B579B600268689 /* Calc8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02147A1C27B579B600268689 /* Calc8ViewController.swift */; };
+		02147A1F27B5806500268689 /* Calc7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02147A1E27B5806500268689 /* Calc7ViewController.swift */; };
 		022192E727A30E620042A6C7 /* Calc6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022192E627A30E620042A6C7 /* Calc6ViewController.swift */; };
+		02BAD9A327B5A1150055CCDF /* Calc5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BAD9A227B5A1150055CCDF /* Calc5ViewController.swift */; };
+		02BAD9A527B5A1BE0055CCDF /* Calc4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BAD9A427B5A1BE0055CCDF /* Calc4ViewController.swift */; };
 		02BAEBE327AEFBC100D7488F /* Calc10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BAEBE227AEFBC100D7488F /* Calc10ViewController.swift */; };
 		02D6807127A1B218004CC6E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D6807027A1B218004CC6E7 /* AppDelegate.swift */; };
 		02D6807327A1B218004CC6E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D6807227A1B218004CC6E7 /* SceneDelegate.swift */; };
@@ -39,7 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02147A1A27B5759E00268689 /* Calc9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calc9ViewController.swift; sourceTree = "<group>"; };
+		02147A1C27B579B600268689 /* Calc8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calc8ViewController.swift; sourceTree = "<group>"; };
+		02147A1E27B5806500268689 /* Calc7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calc7ViewController.swift; sourceTree = "<group>"; };
 		022192E627A30E620042A6C7 /* Calc6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calc6ViewController.swift; sourceTree = "<group>"; };
+		02BAD9A227B5A1150055CCDF /* Calc5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calc5ViewController.swift; sourceTree = "<group>"; };
+		02BAD9A427B5A1BE0055CCDF /* Calc4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calc4ViewController.swift; sourceTree = "<group>"; };
 		02BAEBE227AEFBC100D7488F /* Calc10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calc10ViewController.swift; sourceTree = "<group>"; };
 		02D6806D27A1B218004CC6E7 /* CurveCalc2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurveCalc2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D6807027A1B218004CC6E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,11 +119,16 @@
 				02D6807027A1B218004CC6E7 /* AppDelegate.swift */,
 				02D6807227A1B218004CC6E7 /* SceneDelegate.swift */,
 				02D6807427A1B218004CC6E7 /* ViewController.swift */,
-				02D6807627A1B218004CC6E7 /* Main.storyboard */,
 				02D6807927A1B218004CC6E7 /* Assets.xcassets */,
+				02D6807627A1B218004CC6E7 /* Main.storyboard */,
 				02D6807B27A1B218004CC6E7 /* LaunchScreen.storyboard */,
-				02BAEBE227AEFBC100D7488F /* Calc10ViewController.swift */,
+				02BAD9A427B5A1BE0055CCDF /* Calc4ViewController.swift */,
+				02BAD9A227B5A1150055CCDF /* Calc5ViewController.swift */,
 				022192E627A30E620042A6C7 /* Calc6ViewController.swift */,
+				02147A1E27B5806500268689 /* Calc7ViewController.swift */,
+				02147A1C27B579B600268689 /* Calc8ViewController.swift */,
+				02147A1A27B5759E00268689 /* Calc9ViewController.swift */,
+				02BAEBE227AEFBC100D7488F /* Calc10ViewController.swift */,
 				02D6807E27A1B218004CC6E7 /* Info.plist */,
 			);
 			path = CurveCalc2;
@@ -268,10 +283,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				02BAEBE327AEFBC100D7488F /* Calc10ViewController.swift in Sources */,
+				02147A1F27B5806500268689 /* Calc7ViewController.swift in Sources */,
 				02D6807527A1B218004CC6E7 /* ViewController.swift in Sources */,
 				022192E727A30E620042A6C7 /* Calc6ViewController.swift in Sources */,
 				02D680A127A1CA52004CC6E7 /* PickViewController.swift in Sources */,
 				02D6807127A1B218004CC6E7 /* AppDelegate.swift in Sources */,
+				02147A1B27B5759E00268689 /* Calc9ViewController.swift in Sources */,
+				02BAD9A527B5A1BE0055CCDF /* Calc4ViewController.swift in Sources */,
+				02147A1D27B579B600268689 /* Calc8ViewController.swift in Sources */,
+				02BAD9A327B5A1150055CCDF /* Calc5ViewController.swift in Sources */,
 				02D6807327A1B218004CC6E7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
